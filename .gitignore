@@ -1,0 +1,31 @@
+# Node.js
+node_modules/
+
+# Prisma
+.prisma/
+
+# Environment
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Build
+/dist/
+/build/
+
+# Others
+*.sqlite
+*.db
+
+# Optional: Ignore generated client if not needed
+prisma/client/

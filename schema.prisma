@@ -11,7 +11,7 @@ model Question {
     id                String     @id @default(cuid())
     difficulty        Difficulty @relation(fields: [difficultyId], references: [id])
     category          Category   @relation(fields: [categoryId], references: [id])
-    question          String
+    question          String     @unique
     incorrect_answers Answer[]   @relation(name: "IncorrectAnswers")
     correct_answer    Answer     @relation(name: "CorrectAnswer", fields: [correct_answer_id], references: [id])
     correct_answer_id String
