@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts:generate": "npx prisma generate",
+    "ts:push": "npx prisma db push",
+    "ts:fetch-all": "ts-node prisma/fetch_all_opentdb.ts",
+    "ts:import": "ts-node prisma/import_opentdb.ts",
+    "ts:verify": "ts-node prisma/verify_import.ts",
+    "ts:add": "ts-node prisma/add_manual_question.ts"
   },
   "repository": {
     "type": "git",
@@ -18,10 +24,17 @@
   },
   "homepage": "https://github.com/Luke4910/5AHWII-Luka#readme",
   "devDependencies": {
-    "prisma": "^6.16.2"
+    "prisma": "^6.16.2",
+    "typescript": "^5.5.6",
+    "ts-node": "^10.9.1",
+    "@types/node": "^20.5.1",
+    "@types/minimist": "^1.2.2",
+    "@types/node-fetch": "^2.6.2"
   },
   "dependencies": {
     "@prisma/client": "^6.16.2"
+    ,"minimist": "^1.2.8",
+    "node-fetch": "^2.6.7"
   },
   "prisma": {
     "seed": "node prisma/seed.js"
